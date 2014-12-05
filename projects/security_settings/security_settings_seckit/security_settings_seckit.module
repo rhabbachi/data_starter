@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Security Settings Security Kit feature.
+ */
+
+include_once 'security_settings_seckit.features.inc';

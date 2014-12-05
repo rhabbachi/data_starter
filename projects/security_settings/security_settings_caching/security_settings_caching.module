@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Security Settings Caching feature.
+ */
+
+include_once 'security_settings_caching.features.inc';
