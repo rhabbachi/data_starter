@@ -11,8 +11,11 @@ projects[dkan][subdir] = ""
 
 ; Default Projects
 ; ================
-projects[] = features_master
+projects[] = devinci
+projects[] = environment
+projects[] = environment_indicator
 projects[] = features_banish
+projects[] = features_master
 
 ; Optional Projects
 ; =================
@@ -20,48 +23,85 @@ projects[] = features_banish
 
 ; Development
 ; ===========
-;projects[] = devel
-;projects[] = environment
-;projects[] = maillog
+projects[] = devel
+projects[] = environment
+projects[] = environment_indicator
+projects[] = maillog
 ;projects[] = shield
 ;projects[] = features_override
 ;projects[] = security_review
 
 ; Acquia
 ; ======
-;projects[] = acquia_connector
+projects[] = acquia_connector
 ; Acquia Expire integration
-;projects[] = acquia_purge
+projects[] = acquia_purge
 ; Acquia Search modules
-;projects[] = search_api_acquia
-;projects[] = acquia_search_multi_subs
+projects[] = search_api_acquia
+projects[] = acquia_search_multi_subs
 
 ; Search
 ; ======
-;projects[] = search_api_solr
+projects[] = search_api_solr
 
-; DATA WORKFLOW
-; =====
-projects[data_workflow][type] = module
-projects[data_workflow][download][type] = git
-projects[data_workflow][download][url] = git@github.com:NuCivic/data_workflow.git
-projects[data_workflow][download][branch] = master
+; DKAN Migrate
+; ============
+projects[] = migrate
+; DKAN Migrate Base
+projects[dkan_migrate_base][type] = module
+projects[dkan_migrate_base][download][type] = git
+projects[dkan_migrate_base][download][url] = https://github.com/NuCivic/dkan_migrate_base.git
+projects[dkan_migrate_base][download][branch] = 7.x-1.x
+; DKAN Harvest
+projects[dkan_harvest][type] = module
+projects[dkan_harvest][download][type] = git
+projects[dkan_harvest][download][url] = https://github.com/NuCivic/dkan_harvest.git
+projects[dkan_harvest][download][branch] = 7.x-1.x
 
+; Additional Visualization Entity Components
+; ==========================================
+projects[visualization_entity_maps][type] = module
+projects[visualization_entity_maps][download][type] = git
+projects[visualization_entity_maps][download][url] = https://github.com/NuCivic/visualization_entity_maps.git
+projects[visualization_entity_maps][download][branch] = master
+
+projects[visualization_entity_tables][type] = module
+projects[visualization_entity_tables][download][type] = git
+projects[visualization_entity_tables][download][url] = https://github.com/NuCivic/visualization_entity_tables.git
+projects[visualization_entity_tables][download][branch] = master
 
 
 ; Performance
 ; ===========
-;projects[] = expire
-;projects[] = memcache
-;projects[] = entitycache
-;projects[] = admin_views
+projects[] = expire
+projects[] = memcache
+projects[] = entitycache
+projects[] = admin_views
 
 ; Security
 ; ==========
-;projects[] = securepages
+projects[] = securepages
 
 ; Other
 ; ======
-;projects[] = google_analytics
-;projects[] = migrate
+projects[] = google_analytics
+projects[] = google_tag
+
 ;projects[] = entity
+
+; NuCivic
+; =======
+projects[dkan_acquia_expire][type] = module
+projects[dkan_acquia_expire][download][type] = git
+projects[dkan_acquia_expire][download][url] = https://github.com/NuCivic/dkan_acquia_expire.git
+projects[dkan_acquia_expire][download][branch] = master
+
+projects[dkan_acquia_search_solr][type] = module
+projects[dkan_acquia_search_solr][download][type] = git
+projects[dkan_acquia_search_solr][download][url] = https://github.com/NuCivic/dkan_acquia_search_solr.git
+projects[dkan_acquia_search_solr][download][branch] = master
+
+;projects[nucivic_data_devops][type] = module
+;projects[nucivic_data_devops][download][type] = git
+;projects[nucivic_data_devops][download][url] = https://github.com/NuCivic/nucivic_data_devops.git
+;projects[nucivic_data_devops][download][branch] = master
